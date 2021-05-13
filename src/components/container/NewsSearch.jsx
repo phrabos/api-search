@@ -4,7 +4,7 @@ import { fetchArticles, searchArticles } from '../../services/newsApi';
 import ArticleList from '../articles/ArticleList';
 import Search from '../articles/Search';
 
-export default class NewsSerach extends Component {
+export default class NewsSearach extends Component {
 
   state={
     loading: true,
@@ -26,7 +26,7 @@ export default class NewsSerach extends Component {
   }
 
   onSubmit = async (e) => {
-    e.preventDefault;
+    e.preventDefault();
     this.setState({ loading: true });
     const articles = await searchArticles(this.state.searchQuery);
     this.setState({ articles, loading: false, searchQuery: '' });

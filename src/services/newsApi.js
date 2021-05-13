@@ -1,6 +1,6 @@
 export async function fetchArticles(){
 
-  const res = await fetch(`https://newsapi.org/v2/everything?q=news&apiKey=${process.env.NEWS_API_KEY}`);
+  const res = await fetch(`https://newsapi.org/v2/everything?q=news&pageSize=5&apiKey=${process.env.NEWS_API_KEY}`);
   const { articles } = await res.json();
 
   return articles.map(article => ({
@@ -15,7 +15,7 @@ export async function fetchArticles(){
 
 export async function searchArticles(searchQuery){
 
-  const res = await fetch(`https://newsapi.org/v2/everything?q=${searchQuery}&apiKey=${process.env.NEWS_API_KEY}`);
+  const res = await fetch(`https://newsapi.org/v2/everything?q=${searchQuery}&pageSize=5&apiKey=${process.env.NEWS_API_KEY}`);
   const { articles } = await res.json();
 
   return articles.map(article => ({

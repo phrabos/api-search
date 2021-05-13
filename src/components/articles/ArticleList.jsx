@@ -4,11 +4,12 @@ import Article from './Article';
 
 function ArticleList({ articles }) {
   return (
-    <>
+    <ul aria-label="articles">
       {articles.map(article => {
         return (
           <li 
             key={article.title + article.url}
+            data-testid="article-li"
             style={{
               listStyle: 'none',
               border: '1px solid salmon',
@@ -22,7 +23,7 @@ function ArticleList({ articles }) {
           </li>
         );
       })}
-    </>
+    </ul>
   );
 }
 

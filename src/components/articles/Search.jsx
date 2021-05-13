@@ -12,7 +12,7 @@ function Search({ searchQuery, onSearchQueryChange, onSubmit }) {
         onChange={onSearchQueryChange}
         placeholder="Search"
       />
-      <button aria-label="fetch-articles">Submit</button>
+      <button type="submit" aria-label="fetch-articles">Submit</button>
     </form>
   );
 }

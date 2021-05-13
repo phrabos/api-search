@@ -1,6 +1,6 @@
 import React from 'react';
-import NewsSerach from '../container/NewsSearch';
+import NewsSearach from '../container/NewsSearch';
 
 export default function App() {
-  return <NewsSerach />;
+  return <NewsSearach />;
 }
