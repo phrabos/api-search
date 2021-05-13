@@ -15,4 +15,5 @@ jobs:
     - run: npm ci
     - run: npm test
       env:
+        NEWS_API_KEY: ${{ secrets.MOVIE_API_KEY }}
         CI: true
